@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">	  	
+
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+ 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		
+
+		<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+
+
+		<style type = "text/css">{% block cssBlock %}{% endblock %}</style>
+		<script type="text/javascript">{% block jsBlock %}{% endblock %}</script>
+		<title>{% block titleBlock %}{% endblock %}</title>
+
+		
+	</head>
+	<body>
+		<header>
+			<div class = "container">
+				<nav class = "navbar">
+					<div class="container-fluid" >
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#GoalsNavBar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="" class="navbar-brand"> Goal System </a>
+						</div>
+						<div class="collapse navbar-collapse" id="GoalsNavBar">
+							<ul class = "nav navbar-nav">
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dashboard
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#"> Goals Dashboard</a>	
+										</li>
+									</ul>
+								 </li>
+								<li class="dropdown" >
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Goals
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#"> Daily Goals</a>
+										</li>
+										<li>
+											<a href="#"> Long Term Goals</a>
+										</li>
+										<li>
+											<a href="#"> Weekly feedback</a>
+										</li>
+										<li>
+											<a href="#">Appraisal form</a>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown" >
+									<a class = "dropdown-toggle" data-toggle = "dropdown" href="#">Project Management
+										<span class="caret"></span>
+									</a> 
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Projects</a>
+										</li>
+										<li>
+											<a href="#">Section & Item</a>
+										</li>
+										<li>
+											<a href="#">Items</a>
+										</li>
+										<li>
+											<a href="#">Builds</a>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class = "dropdown-toggle" data-toggle = "dropdown" href="#">Knowledge base
+										<span class="caret"></span> 
+									</a> 
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Tips</a>
+										</li>
+
+
+									</ul>
+								</li>
+							</ul>	
+							<ul class = "nav navbar-nav navbar-right">
+								<li>
+									<a id="btnChangePassword">
+										<span class="glyphicon glyphicon-user" ></span>
+									Change Password
+									</a>
+								</li>					
+								<li>
+									<a id="btnLogout">
+										<span class = "glyphicon glyphicon-log-out">
+										</span> Logout
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		{% block bodyBlock %}{% endblock %}
+	</body>
+</html>

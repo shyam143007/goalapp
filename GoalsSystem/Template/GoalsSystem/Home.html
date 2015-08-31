@@ -1,0 +1,80 @@
+
+
+
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+ 	<script type="text/javascript">
+
+ 	$(document).ready(function(){
+ 		$("button").click(function(){
+ 			this.disabled = true;
+ 			var row = $(this).parent().parent();
+ 			var description = row.children("td:nth-child(3)"); 			
+ 			description.html("<input class = \"form-control\" type='text' id='txtName' value='"+description.text()+"'/>");
+ 			return false;
+ 		});
+ 		});
+
+ 	</script>
+</head>
+<body>
+	<form method = "get">	
+		<div>
+			<table class = "table table-hover">
+			</table>
+
+			<div>
+				<table class = "table table-hover">
+				{% for goal in goals %}
+					{% if forloop.first %}
+						<thead>
+							<tr>
+								<th style = "align:'center'"> Edit </th>
+								<th> Delete </th>
+								<th> id </th>
+								<th> description </th>
+								<th> status </th>
+								<th> remarks </th>
+								 <th> created </th>
+								 <th> closed </th> 
+								<th> lastupdated </th>
+								 <th> isactive </th> 
+								<th> createdby </th> 
+								<th> assignedto </th> 
+								<th> islongterm </th>
+							</tr>
+						</thead>
+						<tbody>
+					{% endif %}
+						<tr  >
+							<td> <button class = "form-control">Edit</button> </td>
+							<td> <button class = "form-control">Delete</button> </td>
+							<td id = "id"> {{ goal.id }} </td>
+							<td id = "description" > {{ goal.description }} </td>
+							<td id = "status" > {{ goal.status }} </td>
+							<td id = "remarks"> {{ goal.remarks }} </td>
+							 <td id = "created"> {{ goal.created }} </td> 
+							<td id = "closed"> {{ goal.closed }} </td> 
+							<td id = "isactive"> {{ goal.isactive }} </td> 
+							<td id = "createdby"> {{ goal.createdby }} </td> 
+							<td id = "assignedto"> {{ goal.assignedto }} </td>  
+							<td id = "islongterm"> {{ goal.islongterm }} </td>					
+						</tr>
+
+						{% if forloop.last %}
+							</tbody>
+						{% endif %}	
+				{% endfor %}
+				</table>
+			</div>
+		</div>
+	</form>
+</body>
+</html> -->
+

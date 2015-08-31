@@ -1,0 +1,47 @@
+{% if goals %}
+	{% for goal in goals %}
+			<tr>
+			<td style="display:none;">
+				<input type="hidden" id="id" value={{goal.id}}>
+			</td>
+			<td>
+				{% if goalStatus == 'pendingGoals' %}
+					<button class = "form-control" id="btnDoToday">Do today</button>
+				{% else %}
+					<button class = "form-control" id="btnEdit">Edit</button>
+				{% endif %}
+			</td>
+			<td>
+				<textarea id="description" name="description" class="form-control" disabled="true" style="resize:none">{{ goal.description }} </textarea>
+			</td>
+			<td>
+				<select id = "status" disabled="true" class="form-control" >
+					<option {% if  goal.status  == 0 %} selected = 'selected' {% endif %}>
+						New
+					</option>
+					<option {% if goal.status == 1 %} selected = 'selected' {% endif %}>
+						In progress
+					</option>
+					<option {% if goal.status == 2 %} selected = 'selected' {% endif %}>
+						Done
+					</option>
+					<option {% if goal.status == 3 %} selected = 'selected' {% endif %}>
+						Paused
+					</option>
+				</select>
+			 </td>
+			<td>
+				<textarea id="remarks" name="remarks" class="form-control" disabled="true" style="resize:none"> {{ goal.remarks }} </textarea> 
+			</td>
+			<td>
+				<input type="text" class="form-control"  name="created" id="created" disabled="true" value= {{ goal.created|date:"d-m-y,g:i-a" }} >
+			 </td>
+			<td>
+				 <input type="text" class="form-control" name="lastupdated"  id = "lastupdated" {{ goal.lastupdated|date:"d-m-y,g:i-a" }} disabled="true">
+			</td>
+		</tr>
+	{% endfor %}
+{% else %}
+	<tr>
+	</tr>
+{% endif %}
